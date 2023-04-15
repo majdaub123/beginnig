@@ -1,0 +1,80 @@
+/* Apply to both .available and .unavailable classes */
+.available, .unavailable {
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .available {
+    background-color: #4CAF50;
+  }
+  
+  .unavailable {
+    background-color: #f44336;
+  }
+  
+  .edit-button {
+    background-color: #008CBA;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .parking.place {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .btn {
+    margin-top: 5px;
+    display: inline-block;
+  }
+  
+  .btn a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #0077B5;
+  }
+  .custom-button {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+  }
+  
+  .custom-button:hover {
+    background-color: #d35400;
+  }
+  p{
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+  }
