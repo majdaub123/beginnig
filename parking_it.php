@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +46,7 @@
     <li onclick="setActive(this)" ><a href="Event_<?php echo $_SESSION["status"];?>.php" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-calendar-exclamation"></i> Events</a></li>
     <li onclick="setActive(this)" class = "active"><a href="parking_<?php echo $_SESSION["status"];?>.php" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-parking"></i> Parking</a></li>
     <li onclick="setActive(this)"><a href="#" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-file-user"></i> Accounts</a></li>
-    <li onclick="setActive(this)"><a href="#" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-utensils-alt"></i> Restaurant</a></li>
+    <li onclick="setActive(this)"><a href="restaurant_<?php echo $_SESSION["status"];?>.php" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-utensils-alt"></i> Restaurant</a></li>
     <li onclick="setActive(this)"><a href="#" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-page-break"></i> Content</a></li>
     <li onclick="setActive(this)"><a href="#" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-comments-alt"></i> feedBack</a></li>
     <li onclick="setActive(this)"><a href="#" class="text-decoration-none px-3 py-2 d-block fs-4"><i class="fas fa-sliders-h-square"></i> Settings</a></li>
@@ -110,13 +111,16 @@
     <?php else: ?>
         <p>We have <?php echo $numParkingPlaces; ?> parking places:</p>
         <div>
+        <a href="add_parking.php" class="add-parking-button">Add Place</a></button>
             <?php foreach ($parkingPlaces as $place): ?>
                 <div class="<?php echo ($place['status_place'] == 'available') ? 'available' : 'unavailable'; ?>">
                     <p class = "parking place">Parking place <?php echo htmlspecialchars($place['number_place']); ?> is <?php echo htmlspecialchars($place['status_place']); ?>.</p>
-                    <button class="btn"><a href="edit_parking.php?id=<?php echo htmlspecialchars($place['ID']); ?>" class="custom-button">Edit</a></button>
+                    <a href="edit_parking.php?id=<?php echo htmlspecialchars($place['ID']); ?>" class="btn">Edit</a></button>
+                     <a href="delete_place_parking.php?id=<?php echo htmlspecialchars($place['ID']); ?>" class="delete-link">Delete</a>
                 </div>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
+   
 </body>
 </html>
